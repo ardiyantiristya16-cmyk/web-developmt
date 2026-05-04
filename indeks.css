@@ -1,0 +1,212 @@
+/* --- CSS CLASIC UNTUK PEMULA (TEMA PINK SOFT) --- */
+
+/* 1. Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #555;
+    background-color: #fff9fb; /* Warna background pink sangat tipis */
+}
+
+/* 2. Container */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 3. Navigasi */
+nav {
+    background: #ffffff;
+    color: #ff8fa3;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(255, 143, 163, 0.1);
+}
+
+nav .logo {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff8fa3;
+}
+
+nav .logo span {
+    color: #ffb6c1;
+}
+
+nav .nav-links {
+    float: right;
+    list-style: none;
+    margin-top: 5px;
+}
+
+nav .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    color: #ff8fa3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #ffb6c1;
+}
+
+nav::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 4. Hero Section */
+header {
+    background: linear-gradient(rgba(255, 182, 193, 0.4), rgba(255, 182, 193, 0.4)), url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+header h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff8fa3;
+    color: #fff;
+    padding: 12px 35px;
+    text-decoration: none;
+    border-radius: 30px; /* Lebih bulat */
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 143, 163, 0.3);
+}
+
+.btn:hover {
+    background: #ffb6c1;
+    transform: scale(1.05);
+}
+
+/* 5. Section */
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: #fff0f3;
+}
+
+h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #ff8fa3;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h3::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #ffb6c1;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 6. Grid Proyek */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden; /* Agar gambar tidak keluar dari border radius */
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.1);
+    transition: all 0.3s;
+    border: 1px solid #ffeef1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 182, 193, 0.2);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Agar gambar rapi di dalam kotak */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h4 {
+    color: #ff8fa3;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* 7. Footer */
+footer {
+    background: #ff8fa3;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* 8. Responsif */
+@media (max-width: 768px) {
+    nav .logo, nav .nav-links {
+        float: none;
+        text-align: center;
+        display: block;
+        margin: 10px 0;
+    }
+    
+    nav .nav-links li {
+        margin: 5px 10px;
+    }
+    
+    header h2 {
+        font-size: 32px;
+    }
+}
